@@ -1,0 +1,220 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Sign Up</title>
+<link href="jQueryAssets/jquery.ui.core.min.css" rel="stylesheet" type="text/css">
+<link href="jQueryAssets/jquery.ui.theme.min.css" rel="stylesheet" type="text/css">
+<link href="jQueryAssets/jquery.ui.tabs.min.css" rel="stylesheet" type="text/css">
+<script src="jQueryAssets/jquery-1.8.3.min.js" type="text/javascript"></script>
+<script src="jQueryAssets/jquery-ui-1.9.2.tabs.custom.min.js" type="text/javascript"></script>
+<script>function checkForm2(){
+	  if(document.getElementById("username1").value == "") {
+      alert("Username cannot be blank!");
+      document.form2.username_Employee.focus();
+      return false;
+	  }if(document.getElementById("password1").value == "" || document.getElementById("password1").length < 6) {
+      alert("Password should be atleast 6 characters");
+      document.form2.password1_Employee.focus();
+      return false;
+	  }if(document.getElementById("password1").value != "" && document.getElementById("password1").value != document.getElementById("password2").value) {
+      alert(" Passwords do not match ");
+      document.form2.password1_Employee.focus();
+      return false;
+	  }if(document.getElementById("fname1").value == "") {
+      alert("First Name cannot be blank!");
+      document.form2.fname_Employee.focus();
+      return false;
+	  }if(document.getElementById("lname1").value == "") {
+      alert("Last Name cannot be blank!");
+      document.form2.lname_Employee.focus();
+      return false;
+	  }if(document.getElementById("dob").value == "") {
+      alert("Date of birth cannot be blank!");
+      document.form2.dob_Employee.focus();
+      return false;
+	  }if(document.getElementById("male").checked == false && document.getElementById("female").checked != true) {
+      alert("Gender should be selected!");
+      document.form2.sex_Employee.focus();
+      return false;
+	  }if(document.getElementById("sadd1").value == "") {
+      alert("Street Address cannot be blank!");
+      document.form2.stadd_Employee.focus();
+      return false;
+	  }if(document.getElementById("city1").value == "") {
+      alert("City cannot be blank!");
+      document.form2.city_Employee.focus();
+      return false;
+	  }if(document.getElementById("state1").value == "") {
+      alert("State cannot be blank!");
+      document.form2.state_Employee.focus();
+      return false;
+	  }if(document.getElementById("zip1").value == "" || document.getElementById("zip1").length != 5) {
+      alert("Please check the Zipcode");
+      document.form2.zip_Employee.focus();
+      return false;
+	  }
+	  var phoneno =/^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+	  if(document.getElementById("phone1").value == "" || document.getElementById("phone1").value.match(phoneno)) {
+      alert("Please check the phone number");
+      document.form2.Phno_Employee.focus();
+      return false;
+	  }
+	  var Email = /^(?:[\w\!\#\$\%\&\'\*\+\-\/\=\?\^\`\{\|\}\~]+\.)*[\w\!\#\$\%\&\'\*\+\-\/\=\?\^\`\{\|\}\~]+@(?:(?:(?:[a-zA-Z0-9](?:[a-zA-Z0-9\-](?!\.)){0,61}[a-zA-Z0-9]?\.)+[a-zA-Z0-9](?:[a-zA-Z0-9\-](?!$)){0,61}[a-zA-Z0-9]?)|(?:\[(?:(?:[01]?\d{1,2}|2[0-4]\d|25[0-5])\.){3}(?:[01]?\d{1,2}|2[0-4]\d|25[0-5])\]))$/;
+	  if(document.getElementById("email1").value == "" || document.getElementById("email1").value.match(Email)) {
+      alert("Please provide email in correct format. Eg: xyz@abc.com");
+      document.form2.emailid_Employee.focus();
+      return false;
+	  }if(document.getElementById("plan1").value == "") {
+      alert("Please select a plan");
+      document.form2.Plan_Employee.focus();
+      return false;
+	  }if(document.getElementById("academic").value == "") {
+      alert("Please provide your academic background");
+      document.form2.Academic.focus();
+      return false;
+	  }if(document.getElementById("workauth").value == "") {
+      alert("State cannot be blank!");
+      document.form2.work_auth.focus();
+      return false;
+	  }}
+	  function checkForm3(){
+	  if(document.getElementById("username2").value == "") {
+      alert("Username cannot be blank!");
+      document.form3.username_Employer.focus();
+      return false;
+	  }if(document.getElementById("password3").value == "" || document.getElementById("password3").length < 6) {
+      alert("Password should be atleast 6 characters");
+      document.form3.password_Employer.focus();
+      return false;
+	  }if(document.getElementById("password3").value != "" && document.getElementById("password3").value != document.getElementById("password4").value) {
+      alert(" Passwords do not match ");
+      document.form3.password_Employer.focus();
+      return false;
+	  }if(document.getElementById("fname2").value == "") {
+      alert("First Name cannot be blank!");
+      document.form3.fname_Employer.focus();
+      return false;
+	  }if(document.getElementById("lname2").value == "") {
+      alert("Last Name cannot be blank!");
+      document.form3.lname_Employer.focus();
+      return false;
+	  }if(document.getElementById("firm").value == "") {
+      alert("Last Name cannot be blank!");
+      document.form3.firm_name_Employer.focus();
+      return false;
+	  }if(document.getElementById("sadd2").value == "") {
+      alert("Street Address cannot be blank!");
+      document.form3.stadd_Employer.focus();
+      return false;
+	  }if(document.getElementById("city2").value == "") {
+      alert("City cannot be blank!");
+      document.form3.city_Employer.focus();
+      return false;
+	  }if(document.getElementById("state2").value == "") {
+      alert("State cannot be blank!");
+      document.form3.state_Employer.focus();
+      return false;
+	  }if(document.getElementById("zip2").value == "" || document.getElementById("zip2").length != 5) {
+      alert("Please check the Zipcode");
+      document.form3.zip_Employer.focus();
+      return false;
+	  }
+	  var phoneno =/^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+	  if(document.getElementById("phone2").value == "" || document.getElementById("phone2").value.match(phoneno)) {
+      alert("Please check the phone number");
+      document.form3.Phno_Employer.focus();
+      return false;
+	  }
+	  var Email = /^(?:[\w\!\#\$\%\&\'\*\+\-\/\=\?\^\`\{\|\}\~]+\.)*[\w\!\#\$\%\&\'\*\+\-\/\=\?\^\`\{\|\}\~]+@(?:(?:(?:[a-zA-Z0-9](?:[a-zA-Z0-9\-](?!\.)){0,61}[a-zA-Z0-9]?\.)+[a-zA-Z0-9](?:[a-zA-Z0-9\-](?!$)){0,61}[a-zA-Z0-9]?)|(?:\[(?:(?:[01]?\d{1,2}|2[0-4]\d|25[0-5])\.){3}(?:[01]?\d{1,2}|2[0-4]\d|25[0-5])\]))$/;
+	  if(document.getElementById("email2").value == "" || document.getElementById("email2").value.match(Email)) {
+      alert("Please provide email in correct format. Eg: xyz@abc.com");
+      document.form3.emailid_Employer.focus();
+      return false;
+	  }if(document.getElementById("plan2").value == "") {
+      alert("Please select a plan");
+      document.form3.Plan_Employer.focus();
+      return false;
+	  }}
+	  </script>
+</head>
+
+<body>
+<h1><center>Registration</center></h1>
+<div id="Tabs1">
+  <ul>
+    <li><a href="#tabs-1">Employee</a></li>
+    <li><a href="#tabs-2">Employer</a></li>
+  </ul>
+  <div id="tabs-1">
+    <p>
+    <form name="form2" method="post"  >
+    	*Username: <input type="text"  id="username1" name="username_Employee"/><br><br>
+        *Password: <input type="password" id="password1" name="password1_Employee"/><br><br>
+        *Retype Password: <input type="password" id="password2" name="password2_Employee"/><br><br>
+        *First Name: <input type="text" id="fname1" name="fname_Employee"/>&nbsp
+        *Last Name: <input type="text" id="lname1" name="lname_Employee"/><br><br>
+        *Date of Birth: <input type="date" id="dob" name="dob_Employee" placeholder="mm/dd/yyyy"/><br><br>
+        *Gender: Male<input type="radio" id="male" name="sex_Employee" value="Male"/>
+        		Female<input type="radio" id = "female"name="sex_Employee" value="Female"/><br><br>
+        *Street Address: <input type="text" id="sadd1" name="stadd_Employee"/><br><br>
+        *City: <input type="text" id="city1" name="city_Employee" />&nbsp
+        *State: <input type="text" id="state1" name="state_Employee" />&nbsp
+        *Zipcode: <input type="text" id="zip1" name="zip_Employee" /><br><br>
+        *Phone Number: <input type="text" id="phone1" name="Phno_Employee"/><br><br>
+        *Email id: <input type="email" id = "email1" name="emailid_Employee" /><br><br>
+        *Academic Background: <select id="academic"><option name="Academic" value="" >Select</option >
+									<option name="Academic" value="undergrad" >Undergraduate</option >
+        							  <option name="Academic" value ="Graduate">Graduate</option >
+        							  <option name="Academic" value ="high school">High School</option ></select><br><br>                         
+        *Work Authorization type: <select id="workauth"><option name="work_auth" value="" >Select</option >
+									<option name="work_auth" value="uscitizen" >US Citizen</option >
+        							  <option name="work_auth" value ="Permanentresident">Permanent Resident </option >
+        							  <option name="work_auth" value ="Non-immigrant ">Non-Immigrant with work authorization</option >
+                                  </select><br><br><hr>
+         <h3>PAYMENT DETAILS:</h3>
+         	*Select Plan: <select id="plan1"><option name="Plan_Employee" value="" >Select</option >
+										<option name="Plan_Employee" value="Plan1" >6-Month Subscription</option >
+        							  <option name="Plan_Employee" value ="Plan2">1-Year Subscription</option >
+                                  </select>
+            Amount: <input type="text" id ="amount1" name="amount_Employee" size="5" /><br><br>
+      <input type="submit" value="SUBMIT" onClick="checkForm2()" action="signup.php"/> &nbsp <input type="button" value="CANCEL"/>
+    
+    </form>
+    </p>
+  </div>
+  <div id="tabs-2">
+    <p>
+    	<form name = "form3" method="post" ">
+    	*Username: <input type="text" id="username2" name="username_Employer" required/><br><br>
+        *Password: <input type="password" id="password3" name="password_Employer" required/><br><br>
+        *Retype Password: <input type="password" id="password4" name="password_Employer" required/><br><br>
+        *First Name: <input type="text" id="fname2" name="fname_Employer" required/>&nbsp
+        *Last Name: <input type="text" id="lname2" name="lname_Employer" required/><br><br>
+        *Firm Name: <input type="text" id="firm" name="firm_name_Employer" required/><br><br>
+        *Street Address: <input type="text" id = "sadd2" name="stadd_Employer" required/><br><br>
+        *City: <input type="text" id="city2" name="city_Employer"  required/>&nbsp
+        *State: <input type="text" id="state2" name="state_Employer"  required/>&nbsp
+        *Zipcode: <input type="text" id="zip2" name="zip_Employer" pattern=""required/><br><br>
+        *Primary Phone Number: <input type="text" id="phone2" name="Phno_Employer" required/>&nbsp
+        *Email id: <input type="email" id="email2" name="emailid_Employer" required/><br><br><hr>
+        
+        <h3>PAYMENT DETAILS:</h3>
+         	*Select Plan: <select id="plan2"><option name="Plan_Employer" value="" >Select</option >
+									<option name="Plan_Employer" value="Plan1" >6-Month Subscription</option >
+        							  <option name="Plan_Employer" value ="Plan2">1-Year Subscription</option >
+                                  </select>
+            Amount: <input type="text" name="amount_Employer" size="5"/><br><br>
+        <input type="submit" value="SUBMIT" onCLick="checkForm3()" action="signup.php" /> &nbsp <input type="button" value="CANCEL"/>
+    
+    </form>
+    </p>
+  </div>
+</div>
+<script type="text/javascript">
+$(function() {
+	$( "#Tabs1" ).tabs(); 
+});
+</script>
+</body>
+</html>

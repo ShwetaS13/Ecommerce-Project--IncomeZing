@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Part Time Jobs</title>
+<link href="jQueryAssets/jquery.ui.core.min.css" rel="stylesheet" type="text/css">
+<link href="jQueryAssets/jquery.ui.theme.min.css" rel="stylesheet" type="text/css">
+<link href="jQueryAssets/jquery.ui.tabs.min.css" rel="stylesheet" type="text/css">
+<script src="jQueryAssets/jquery-1.8.3.min.js" type="text/javascript"></script>
+<script src="jQueryAssets/jquery-ui-1.9.2.tabs.custom.min.js" type="text/javascript"></script>
+</head>
+
+<body>
+<div>
+<h1><center style="font-style: italic; color: #E92125; text-shadow: 2px 0px;">Ecomm Genes</center></h1>
+</div>
+<div id="Tabs1">
+  <ul>
+    <li><a href="#tabs-1">Profile</a></li>
+    <li><a href="#tabs-2">Home</a></li>
+    <li><a href="#tabs-3">About Us</a></li>
+    <li><a href="#tabs-4">ContactUs</a></li>
+    <li><a href="#tabs-5">FAQs</a></li>
+    <li><a href="#tabs-6">Plans</a></li>
+  </ul>
+  <div id="tabs-1">
+    <p>
+    <h2>List the changes that need to be done in your profile.</h2>
+        
+    <form method="post" action="edit_profile.php">
+    	*Username: <input type="text" name="username" /><br><br>
+        *First Name: <input type="text" name="fname" />&nbsp
+        *Last Name: <input type="text" name="lname" /><br><br>
+        Street Address: <input type="text" name="stadd" /><br><br>
+        City: <input type="text" name="city"  />&nbsp
+        State: <input type="text" name="state" />&nbsp
+        Zipcode: <input type="text" name="zip"/><br><br>
+        Phone Number: <input type="text" name="Phno" /><br><br>
+        Email id: <input type="email" name="emailid"/><br><br>
+        Academic Background: <select><option name="Academic" value="undergrad" >Undergraduate</option >
+        							  <option name="Academic" value ="Graduate">Graduate</option >
+        							  <option name="Academic" value ="high school">High School</option ></select><br><br>
+        Disability: Yes<input type="radio" name="Disability" value="Yes"/>
+        			 No<input type="radio" name="Disability" value="No"/><br><br> 
+              If Yes: <textarea name="disability_comment" rows="3" cols="20"></textarea><br/><br/>                          
+        Work Authorization type: <select><option name="workauth" value="uscitizen" >US Citizen</option >
+        							  <option name="workauth" value ="Permanentresident">Permanent Resident </option >
+        							  <option name="workauth" value ="Non-immigrant ">Non-Immigrant with work authorization</option >
+                                  </select><br><br><hr>
+        <h3>Change Payment Details:</h3>
+        Select Plan: <select><option name="plan" value="Plan1" >Plan1</option >
+        							  <option name="plan" value ="Plan2">Plan2</option >
+                                  </select>
+            Amount: <input type="text" name="amount" size="5" /><br><br>
+      <input type="submit" value="SUBMIT"/> &nbsp <input type="button" value="CANCEL"/>
+    
+    </form>
+    </p>
+  </div>
+  <div id="tabs-2">
+  	<p>Pic of us</p>
+    
+  </div>
+  <div id="tabs-3">
+    <p>Content 3</p>
+  </div>
+  <div id="tabs-4">
+    <p>Content 1</p>
+  </div>
+  <div id="tabs-5">
+    <p>Content 2</p>
+  </div>
+  <div id="tabs-6">
+    <p>
+    <div >
+   	<p>Content 2</p>
+     </div>
+    </p>
+    </div>
+  
+</div>
+<script type="text/javascript">
+$(function() {
+	$( "#Tabs1" ).tabs(); 
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+Employee: 
+Uname   | fname    | lname  | dob | Gender | SAddress | City    | State   | Zipcode | Phone | Email | Academic | WorkAut | Plan  | Amount 
+
+EMployer:
+Uname    | fname | lname   | firm | SAddress | City   | State   | Zipcode | Phone| Email | Plan  | Amount
+
+*Credentials: 
+Uname    | Pwd| OldPwd | Category
+
+cevents:
+Uname    | Event| EmpNum | Description  | Date    
+
+sevents:
+Uname   | Event| Date 
+
+*Members:
+id | username | password | category
